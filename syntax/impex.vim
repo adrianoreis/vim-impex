@@ -9,12 +9,13 @@ endif
 
 
 syn match impexComment '#[^%].*$'
+syn match beanShellCall '#%.*$'
 syn match itemType '\w\+;' contained
 syn match modifierValue '=.*]' contained
 "syn region impexVariable start='\$' end='\W' fold transparent contains=theVariable
 "syn match theVariable '\w*'
 syn match theVariable '\$\w*'
-syn match theData '^;.*$'
+syn match valueLine '^;.*$'
 syn keyword impexMode INSERT UPDATE INSERT_UPDATE REMOVE nextgroup=itemType skipwhite
 syn keyword impexModifiers batchmode cacheUpdate processor impex.legacy.mode alias allownull nextgroup=modifierValue skipwhite
 syn keyword impexModifiers cellDecorator collection-delimiter dateformat default ignoreKeyCase
@@ -29,7 +30,8 @@ hi def link impexComment    Comment
 hi def link impexModifiers  Keyword
 hi def link modifierValue   Statement 
 hi def link theVariable     Identifier 
-hi def link theData         Constant 
+hi def link valueLine       Constant 
+hi def link beanShellCall       PreProc 
 
 "Comment Constant Identifier Statement PreProc Type Special Underlined Ignore
 "Error Todo
