@@ -1,7 +1,7 @@
 " Vim syntax file
 " Language:	Hybris impex
 " Maintainer:	Adriano Reis <adriano@teste.com>
-" Last Change:	2015-12-23
+"
 
 if exists("b:current_systax")
    finish
@@ -31,7 +31,16 @@ hi def link impexModifiers  Keyword
 hi def link modifierValue   Statement 
 hi def link theVariable     Identifier 
 hi def link valueLine       Constant 
-hi def link beanShellCall       PreProc 
+hi def link beanShellCall   PreProc 
 
 "Comment Constant Identifier Statement PreProc Type Special Underlined Ignore
 "Error Todo
+"
+"Impex components:
+"Headers
+"Lines of values
+"Comments
+"Macrodefinitions
+"BeanShell calls
+"Line declaring user rights
+"
